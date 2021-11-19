@@ -6,8 +6,6 @@ from .utils import create_shortened_url
 Url shortener model
 '''
 
-from django.db import models
-
 
 # Create your models here.
 
@@ -38,9 +36,6 @@ class Shortener(models.Model):
         return f'{self.long_url} to {self.short_url}'
 
     def save(self, *args, **kwargs):
-        # If the short url wasn't specified
-        if not self.short_url:
-            # We pass the model instance that is being saved
-            self.short_url = create_shortened_url(self)
+        self.short_url = create_shortened_url(self)
 
         super().save(*args, **kwargs)
