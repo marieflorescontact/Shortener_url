@@ -3,7 +3,9 @@ Shortener Forms urlshortener/forms.py
 '''
 
 from django import forms
-
+from django.forms import ModelForm
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
 from .models import Shortener
 
 
@@ -15,5 +17,11 @@ class ShortenerForm(forms.ModelForm):
 
     class Meta:
         model = Shortener
+        fields = ('long_url',)
 
-        fields = ('long_url', )
+
+class CreateUserForm(UserCreationForm):
+    class Meta:
+        model = User
+        #fields = '__all__'
+        fields = ['username', 'email', 'password1', 'password2']
