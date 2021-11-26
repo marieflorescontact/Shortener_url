@@ -17,7 +17,7 @@ from .forms import ShortenerForm
 
 
 # Create your views here.
-@login_required(login_url='login')
+#@login_required(login_url='login')
 def home_view(request):
     template = 'urlshortener/home.html'
 
