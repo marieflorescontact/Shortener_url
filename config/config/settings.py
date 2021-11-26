@@ -24,10 +24,6 @@ SECRET_KEY = 'django-insecure-v@(*r@+^6zxsc@*f_d$xdp9@z_zg%x)#^((xig*gf(a6^3whxi
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-INTERNAL_IPS = [
-    "127.0.0.1",
-]
-
 ALLOWED_HOSTS = []
 
 # Application definition
@@ -43,7 +39,7 @@ INSTALLED_APPS = [
     'urlshortener',
     # other Django apps
     'tailwind',
-    'theme'
+    'theme',
 
 ]
 
@@ -129,3 +125,6 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 TAILWIND_APP_NAME = 'theme'
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
