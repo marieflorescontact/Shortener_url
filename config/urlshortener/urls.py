@@ -14,6 +14,6 @@ urlpatterns = [
     path("", views.home_view, name="home"),
     path('register/', views.registerPage, name="register"),
     path("login/", views.loginPage, name="login"),
-    path("logout/", views.loginPage, name="logout"),
+    path("logout/", views.logoutUser, name="logout"),
     path('<str:shortened_part>', views.redirect_url_view, name='redirect')
 ]
