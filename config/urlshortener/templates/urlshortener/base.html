@@ -1,6 +1,6 @@
 {% load tailwind_tags %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full bg-gray-50">
 <head>
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -13,7 +13,7 @@
             integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
             crossorigin="anonymous"
     />
-
+    <link href="/tailwind.css" rel="stylesheet">
 
     <link
             rel="stylesheet"
@@ -23,7 +23,7 @@
     />
     {% tailwind_css %}
 </head>
-<body>
+<body class="h-full">
 
 {% block body %}
 

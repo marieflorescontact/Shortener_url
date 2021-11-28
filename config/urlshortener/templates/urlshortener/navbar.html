@@ -1,37 +1,44 @@
 {% load static %}
 
 
-<style>
-    .hello-msg {
-        font-size: 18px;
-        color: #fff;
-        margin-right: 20px;
-    }
-</style>
+<nav class="p-1 bg-white shadow  flex  items-center justify-between">
+    <div class="ml-8"><h1 class="text-base font-medium">URL Shortner Application</h1></div>
+    <div> {% if user.is_authenticated%}
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-
-
-        </ul>
+    <div class="flex items-center">
+            <div class="mx-8">
+            <span>Hello, {{request.user}}</span>
+        </div>
+        <div>
+            <button type="button"
+                    class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                <a href="{% url 'logout' %}">Logout</a>
+            </button>
+        </div>
     </div>
-    {% if user.is_authenticated%}
 
 
-    <span class="hello-msg">Hello, {{request.user}}</span>
-    <span><a class="hello-msg" href="{% url 'logout' %}">Logout</a></span>
 
-    {% else %}
-    <span><a class="hello-msg" href="{% url 'login' %}">Login</a></span>
-    <span><a class="hello-msg" href="{% url 'register' %}">Register</a></span>
+        {% else %}
+        <div class="flex ">
+            <div class="mx-2">
+                <button type="button"
+                        class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    <a href="{% url 'login' %}">Login</a>
+                </button>
+            </div>
 
-    {% endif %}
+            <div>
+                <button type="button  "
+                        class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    <a href="{% url 'register' %}">Register</a>
+                </button>
+            </div>
+        </div>
+
+
+        {% endif %}
+    </div>
 
 
 </nav>

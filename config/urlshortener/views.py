@@ -2,7 +2,7 @@
 Shortener views
 '''
 from django.shortcuts import render, redirect
-
+from django.template import RequestContext
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
