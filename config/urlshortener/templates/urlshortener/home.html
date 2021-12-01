@@ -2,11 +2,10 @@
 
 {% block body %}
 
-<div class="container ">
-  <div class="card mt-5">
-    <div class="card-header text-center py-3">
+<div class="container p-12 space-y-8">
+  <div class="pl-4 text-center "><h1 class="font-semibold text-4xl text-indigo-600">URL Shortner Application</h1></div>
+  <div class="border-1 border-gray-200 rounded shadow ">
 
-    </div>
    {%  include 'urlshortener/navbar.html' %}
     <div class="px-3 py-4">
       {%  include 'urlshortener/shortner_form.html' %}
@@ -20,11 +19,11 @@
 
   {% if new_url %}
 
-  <div class="mx-auto text-center mt-5">
-    <h2 class="text-danger">Your shortened Url</h2>
+  <div class="text-center p-6 mt-8">
+    <h2 class="text-purple-600">Your shortened Url</h2>
     <p>You can copy the Link below and share it with your friends</p>
-    <p class="">{{new_url}}</p>
-    <p><span class="text-danger">Previous URL:</span> {{long_url}}</p>
+    <p class="text-purple-600">{{new_url}}</p>
+    <p><span class="text-purple-600">Previous URL:</span> {{long_url}}</p>
   </div>
   {% endif %}
 </div>
