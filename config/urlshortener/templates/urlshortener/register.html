@@ -14,36 +14,14 @@
                 </a>
             </p>
         </div>
-        <form class="mt-8 space-y-6" action="" method="POST">{% csrf_token %}
+        <form class="mt-8 space-y-6 " action="" method="POST">{% csrf_token %}
 
             <div class="rounded-md shadow-sm -space-y-px">
+                {{form.username}}
+                {{form.email}}
+                {{form.password1}}
+                {{form.password2}}
 
-                <div>
-
-                    <input id="username" name="username" type="text" required
-                           class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                           placeholder="Username">
-                    {{form.username}}
-                </div>
-                <div>
-                    <input id="email" name="email" type="email" autocomplete="email" required
-                           class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                           placeholder="Email address">
-                    {{form.email}}
-                </div>
-                <div>
-                    <input id="password" name="password" type="password" autocomplete="current-password" required
-                           class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                           placeholder="Password">
-                    {{form.password1}}
-                </div>
-                <div>
-                    <input id="password confirmation" name="password" type="password" autocomplete="current-password"
-                           required
-                           class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                           placeholder="Confirm Password">
-                    {{form.password2}}
-                </div>
             </div>
 
             <div class="flex items-center justify-between">
