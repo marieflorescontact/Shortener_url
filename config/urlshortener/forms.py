@@ -13,7 +13,7 @@ class ShortenerForm(forms.ModelForm):
     long_url = forms.URLField(widget=forms.URLInput(
         attrs={
             "class": "shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md",
-            "placeholder": "Your URL to shorten"}))
+            "placeholder": "Copy/paste URL to shorten"}))
     wished_url = forms.CharField(required=False, widget=forms.TextInput(
         attrs={
             "class": "shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md",

@@ -2,11 +2,11 @@
 Shortener views
 '''
 from django.shortcuts import render, redirect
-from django.template import RequestContext
+
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
-from django.contrib.auth.decorators import login_required
+
 # Model
 from .models import Shortener
 from .forms import CreateUserForm
@@ -17,9 +17,19 @@ from .forms import ShortenerForm
 
 
 # Create your views here.
-#@login_required(login_url='login')
+# @login_required(login_url='login')
 def home_view(request):
     template = 'urlshortener/home.html'
+
+    context = {}
+
+
+
+    return render(request, template, context)
+
+
+def shortener_view(request):
+    template = 'urlshortener/shortener.html'
 
     context = {}
 
