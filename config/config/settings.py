@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Custom apps
     'urlshortener',
+    'qrcod',
     # other Django apps
     'tailwind',
     'theme',

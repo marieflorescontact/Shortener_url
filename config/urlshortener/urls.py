@@ -12,6 +12,7 @@ appname = "shortener"
 urlpatterns = [
     # Home view
     path("", views.home_view, name="home"),
+    path("shortener/", views.shortener_view, name="shortener"),
     path('register/', views.registerPage, name="register"),
     path("login/", views.loginPage, name="login"),
     path("logout/", views.logoutUser, name="logout"),

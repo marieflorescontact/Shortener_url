@@ -2,5 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/pymaging" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/pymaging-png" vcs="Git" />
   </component>
 </project>
