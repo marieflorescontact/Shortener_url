@@ -24,7 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # Shortener Urls
     path('', include('urlshortener.urls')),
-    path('', include('qrcode.urls'))
+    path('', include('qrcod.urls'))
 
 ]
 

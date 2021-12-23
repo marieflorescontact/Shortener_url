@@ -4,7 +4,7 @@ Shortener Forms qrcode/forms.py
 
 from django import forms
 
-from config.qrcode.models import Qrcode
+from config.qrcod.models import Qrcode
 
 
 class QrcodeForm(forms.ModelForm):
