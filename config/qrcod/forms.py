@@ -4,15 +4,16 @@ Shortener Forms qrcode/forms.py
 
 from django import forms
 
-from config.qrcod.models import Qrcode
+from config.qrcod.models import Qrcod
 
 
 class QrcodeForm(forms.ModelForm):
-    document = forms.URLField(widget=forms.URLInput(
+    text = forms.CharField(required=False, widget=forms.TextInput(
         attrs={
             "class": "shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md",
-            "placeholder": "upload website or text"}))
+            "placeholder": "Paste Website'URL or text",
+            "name": "qr_text"}))
 
     class Meta:
-        model = Qrcode
-        fields = ('document',)
+        model = Qrcod
+        fields = ('text',)
