@@ -29,3 +29,10 @@ Pour lancer le linter, vous pouvez utiliser la commande ci-dessous :
 
     python -m flake8 
 
+### Pour run le projet
+
+    python manage.py runserver
+
+### Pour lancer le serveur taillwind
+    
+    python3 manage.py tailwind start
